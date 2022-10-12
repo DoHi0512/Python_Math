@@ -12,6 +12,7 @@ for i in range(5,t+1):
     if i % prime_num == 0 :
       flag = False
       break
+      
   if flag == True:
     if prime[-1] + 2 == i : cnt+=1
     prime.append(i)
