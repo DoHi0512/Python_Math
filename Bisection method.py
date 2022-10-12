@@ -1,18 +1,18 @@
-start = 0
-end = 5
+import math as m
+start = 2
+end = 4
 ans = 0
 
 def f(x):
-  return x**2-3*x-1
+  return m.sin(x)
+
 for i in range(100):
   mid = (start + end) / 2
-  if f(mid) > 0 :
-    print(mid)
-    end = mid
-  elif f(mid) < 0 :
-    print(mid)
+  if f(start) * f(mid) > 0 :
     start = mid
-  else:
+  elif f(mid) == 0 :
     ans = mid
-
+  else:
+    end = mid
+  ans = mid
 print(ans)
